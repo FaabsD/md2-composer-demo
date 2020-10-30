@@ -13,3 +13,7 @@
 // Je hebt NU dus een "qrcode.png" die je kunt inladen
 
 // Zet de tekst op het scherm die in de QR Code zit!
+require 'vendor/autoload.php';
+$qrcode = new \Zxing\QrReader('Rickroll.png');
+$text = $qrcode->text();
+echo $text;
